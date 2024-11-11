@@ -1,0 +1,11 @@
+Service,Details,Instances,Cost
+Cloud Front,Data transfer out to internet 30TB; Data transfer out to origin 5TB;,-,"2,611.20"
+S3 Bucket,Standard; 5TB per month;,-,121.75
+VPC,VPC ith 4 subnets,-,585.25
+Load Balancer,Application Load Balancer;,1,17.6
+EC2,m6a.2xlarge; OnDemand; 50 GB General Purpose SSD; ,6,"1,537.73"
+RDS (Master & Replica),db.m1.xlarge; General Purpose SSD;,2,"1,581.92"
+Total,-,-,"6,455.45"
+,,,
+Rationale,,,
+"I reduced costs by adjusting two services. First, I downgraded the RDS instance from db.m3.2xlarge to db.m1.xlarge but kept the read replica, as the application is read-intensive. Second, I reduced the number of EC2 instances from 10 to 6 while maintaining multi-AZ deployment, assuming that 6 instances will handle the load since the system relies more on network performance and caching than compute power. I prioritized services like CloudFront (despite its higher cost) and multi-AZ configurations to ensure availability and a high-quality user experience, which are key factors for a successful system.",,,

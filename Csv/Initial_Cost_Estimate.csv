@@ -1,0 +1,8 @@
+Service,Details,Instances,Cost
+Cloud Front,Data transfer out to internet 30TB; Data transfer out to origin 5TB;,-,"2,611.20"
+S3 Bucket,Standard; 5TB per month;,-,121.75
+VPC,VPC ith 4 subnets,-,585.25
+Load Balancer,Application Load Balancer;,1,17.6
+EC2,m6a.2xlarge; OnDemand; 50 GB General Purpose SSD; ,10,"2,562.88"
+RDS (Master & Replica),db.m3.2xlarge; General Purpose SSD;,2,"2,165.92"
+Total,-,-,"8,064.60"

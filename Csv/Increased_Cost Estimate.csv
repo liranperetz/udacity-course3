@@ -1,0 +1,13 @@
+Service,Details,Instances,Cost
+Cloud Front,Data transfer out to internet 30TB; Data transfer out to origin 5TB;,-,"2,611.20"
+S3 Bucket,Standard; 5TB per month;,-,121.75
+VPC,VPC ith 4 subnets,-,585.25
+Load Balancer,Application Load Balancer;,1,17.6
+EC2,m6a.2xlarge; OnDemand; 50 GB General Purpose SSD; ,10,"2,562.88"
+Aurora PostgreSQL,db.r5.4xlarge; Aurora I/O-Optimized;,3,"2,923.24"
+ElastiCache,AVG cache data size 40GB; Instance cache.m4.4xlarge;,1,"7,130.64"
+Total,-,-,"15,952.56"
+,,,
+,,,
+Rationale,,,
+"By increasing EC2 instances back to 10 (m6a.2xlarge), the application gains capacity to handle higher user loads. Upgrading to Aurora PostgreSQL with three db.r5.4xlarge nodes improves database scalability and high availability, crucial for a read-intensive social media platform. Adding ElastiCache with a cache.m4.4xlarge instance and 40 GB cache enhances performance through efficient caching, collectively delivering a better user experience while keeping the total monthly cost at approximately $15,952.56 within budget.",,,
